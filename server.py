@@ -14,4 +14,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         print("Connecté par", addr)
         data = conn.recv(1024)
         print("Reçu :", data.decode())
-        conn.sendall("Message bien reçu".format("utf-8"))
+        conn.sendall("Message bien reçu".encode("utf-8"))
